@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Access.Application.16\shell\openas...]
+@="Open as..."
+
+[HKEY_CLASSES_ROOT\Access.Application.16\shell\openas...\command]
+@="cmd.exe /c PowerShell.exe -Command \"& {ForEach ($arg in $args) {Start-Process PowerShell.exe -Credential '' -Args '-Command & {ForEach ($arg in $args) {Start-process MSACCESS.EXE -Args $arg}}', $arg}}\" \"%1\""
+
